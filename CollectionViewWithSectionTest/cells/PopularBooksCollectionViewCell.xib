@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="PopularBooksCollectionViewCell" id="gTV-IL-0wX" customClass="PopularBooksCollectionViewCell" customModule="CollectionViewWithSectionTest" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="404" height="207"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="404" height="207"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Kgo-V4-sh5">
+                        <rect key="frame" x="0.0" y="0.0" width="404" height="207"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Popular Books" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zfb-nf-O7p">
+                                <rect key="frame" x="8" y="16" width="388" height="19.5"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="14"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="yz9-Fw-shR">
+                                <rect key="frame" x="8" y="43.5" width="388" height="155.5"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="vHH-ga-k5D">
+                                    <size key="itemSize" width="50" height="50"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                            </collectionView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="zfb-nf-O7p" firstAttribute="leading" secondItem="Kgo-V4-sh5" secondAttribute="leading" constant="8" id="GWp-SY-64S"/>
+                            <constraint firstItem="zfb-nf-O7p" firstAttribute="top" secondItem="Kgo-V4-sh5" secondAttribute="top" constant="16" id="Plr-Q6-dtA"/>
+                            <constraint firstAttribute="bottom" secondItem="yz9-Fw-shR" secondAttribute="bottom" constant="8" id="YSm-ix-9SJ"/>
+                            <constraint firstAttribute="trailing" secondItem="yz9-Fw-shR" secondAttribute="trailing" constant="8" id="Ycs-yc-i5A"/>
+                            <constraint firstItem="yz9-Fw-shR" firstAttribute="leading" secondItem="Kgo-V4-sh5" secondAttribute="leading" constant="8" id="hbh-0c-7yT"/>
+                            <constraint firstAttribute="trailing" secondItem="zfb-nf-O7p" secondAttribute="trailing" constant="8" id="iY5-Sc-K5d"/>
+                            <constraint firstItem="yz9-Fw-shR" firstAttribute="top" secondItem="zfb-nf-O7p" secondAttribute="bottom" constant="8" id="syq-4U-gZB"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstItem="Kgo-V4-sh5" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="BQA-VD-fjS"/>
+                <constraint firstAttribute="trailing" secondItem="Kgo-V4-sh5" secondAttribute="trailing" id="Hqb-v4-EXC"/>
+                <constraint firstItem="Kgo-V4-sh5" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="cR0-qQ-y4M"/>
+                <constraint firstAttribute="bottom" secondItem="Kgo-V4-sh5" secondAttribute="bottom" id="nMW-2e-RbN"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <size key="customSize" width="404" height="207"/>
+            <connections>
+                <outlet property="popularBooksCollectionView" destination="yz9-Fw-shR" id="rI4-OD-AAC"/>
+                <outlet property="title" destination="zfb-nf-O7p" id="mno-zi-QEC"/>
+            </connections>
+            <point key="canvasLocation" x="420.80000000000001" y="224.4377811094453"/>
+        </collectionViewCell>
+    </objects>
+</document>
